@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Types>
+  <Type>
+    <Name>System.__ComObject#{c2bfb780-4539-4132-ab8c-0a8772013ab6}</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>KBNumber</Name>
+        <GetScriptBlock>
+                     
+        $this  | 
+            Where-Object {$_.Title -like "*kb*" } | 
+            ForEach-Object {$_.Title -split " "} | 
+            Where-Object {$_ -match "kb\d" } | 
+            ForEach-Object {
+                $_.Replace('(', '').Replace(')','').Replace(",","") 
+            }  
+        
+    
+                </GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+</Types>

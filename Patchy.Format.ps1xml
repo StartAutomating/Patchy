@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>System.__ComObject#{c1c2f21a-d2f4-4902-b5c6-8a081c19a890}System.__ComObject#{70cf5c82-8642-42bb-9dbc-0cfd263c6c4f}</Name>
+      <ViewSelectedBy>
+        <TypeName>System.__ComObject#{c1c2f21a-d2f4-4902-b5c6-8a081c19a890}</TypeName>
+        <TypeName>System.__ComObject#{70cf5c82-8642-42bb-9dbc-0cfd263c6c4f}</TypeName>
+      </ViewSelectedBy>
+      <CustomControl>
+        <CustomEntries>
+          <CustomEntry>
+            <CustomItem>
+              <Frame>
+                <CustomItem>
+                  <ExpressionBinding>
+                    <ScriptBlock>            
+    if ($_.IsMandatory) {    
+        Write-Host $_.Title -ForegroundColor Red
+    } elseif ($_.AutoSelectOnWebSites) {
+        Write-Host $_.Title -ForegroundColor DarkYellow
+    } else {
+        Write-Host $_.Title -ForegroundColor Green
+    }
+    ""
+</ScriptBlock>
+                  </ExpressionBinding>
+                </CustomItem>
+              </Frame>
+            </CustomItem>
+          </CustomEntry>
+        </CustomEntries>
+      </CustomControl>
+    </View>
+    <View>
+      <Name>System.__ComObject#{c2bfb780-4539-4132-ab8c-0a8772013ab6}</Name>
+      <ViewSelectedBy>
+        <TypeName>System.__ComObject#{c2bfb780-4539-4132-ab8c-0a8772013ab6}</TypeName>
+      </ViewSelectedBy>
+      <CustomControl>
+        <CustomEntries>
+          <CustomEntry>
+            <CustomItem>
+              <Frame>
+                <CustomItem>
+                  <ExpressionBinding>
+                    <ScriptBlock>            
+    Write-Host "$($_.Date) $($_.Title)" 
+    ""
+</ScriptBlock>
+                  </ExpressionBinding>
+                </CustomItem>
+              </Frame>
+            </CustomItem>
+          </CustomEntry>
+        </CustomEntries>
+      </CustomControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
