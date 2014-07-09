@@ -1,5 +1,5 @@
 @{
-        ModuleVersion='0.9'
+        ModuleVersion='1.0'
         TypesToProcess='Patchy.Types.ps1xml'
         FormatsToProcess='Patchy.Format.ps1xml'
         ModuleToProcess='Patchy.psm1'
@@ -17,5 +17,7 @@
             'Patchy.psd1',
             'Patchy.psm1',
             'Patchy.types.ps1xml',
-            'Test-UpdateRebootRequired.ps1'
+            'Test-UpdateRebootRequired.ps1',
+            'Enable-WindowsUpdate.ps1',
+            'Disable-WindowsUpdate.ps1'
     }
